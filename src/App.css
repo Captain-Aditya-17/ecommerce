@@ -2,7 +2,7 @@
   display: none;
 }
 .table-system{
-  grid-template-columns: .5fr 1fr .5fr 1fr;
+  grid-template-columns: .5fr 1fr .5fr .5fr;
 }
 body{
   background-color: #E6E8F5;

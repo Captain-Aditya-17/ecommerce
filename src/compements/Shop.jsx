@@ -14,9 +14,9 @@ const Shop = () => {
   }
 
   return (
-    <div className='p-4 w-full flex gap-5 items-start h-[90vh]'>
-      <div className='w-[80%] gap-3 h-full flex'>
-        <div className='w-[10vw] p-2 h-full gap-y-3 flex flex-col justify-start'>
+    <div className='p-4 w-full flex md:flex-row flex-col gap-5 items-start h-[90vh]'>
+      <div className='md:w-[80%] w-full gap-3 h-full flex'>
+        <div className='md:w-[10vw] p-2 h-full gap-y-3 flex flex-col justify-start'>
           {
             product.image.length > 0 ? product.image.map((item, index) => {
               return <div key={index}
@@ -32,7 +32,7 @@ const Shop = () => {
 
           }
         </div>
-        <div className='w-full h-[38vw] rounded-md overflow-hidden'>
+        <div className='w-full md:h-[38vw] rounded-md overflow-hidden'>
           <img className='w-full h-full object-cover' src={customImage} />
         </div>
       </div>
@@ -60,9 +60,9 @@ const Shop = () => {
         <button
         onClick={()=> CartValue(product)}
          className='mt-5 bg-black text-white py-2 px-[5vw] text-xl font-semibold rounded-md hover:bg-zinc-800'>Add to cart</button>
-        <div className='flex flex-col'>
+        <div className='flex flex-col py-2'>
           <h1 className='text-2xl font-semibold text-zinc-500'>Product details</h1>
-          <p className='w-1/2 text-xl font-semibold text-zinc-500'>{product.description}</p>
+          <p className='md:w-1/2 w-full text-xl font-semibold text-zinc-500'>{product.description}</p>
         </div>
       </div>
     </div>

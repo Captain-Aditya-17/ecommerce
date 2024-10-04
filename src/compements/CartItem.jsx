@@ -20,7 +20,7 @@ const CartItem = () => {
           cart.map((item, index) => {
             return (
               <div key={index} className='w-full rounded-md bg-white p-3 grid table-system gap-5 items-center'>
-                <div className='w-[5vw] cursor-pointer h-[5vw] rounded overflow-hidden'>
+                <div className='md:w-[5vw] cursor-pointer md:h-[5vw] w-[10vw] h-[10vw] rounded overflow-hidden'>
                   <img
                     onClick={() => navigate(`/shop/${item._id}`)}
                     className='w-full h-full object-cover'
@@ -28,7 +28,7 @@ const CartItem = () => {
                     alt={item.name}
                   />
                 </div>
-                <h1 className='text-xl font-semibold'>{item.name}</h1>
+                <h1 className='md:text-xl font-semibold'>{item.name}</h1>
                 <h1 className='text-xl font-semibold'>${item.price}</h1>
                 <div className='flex gap-5'>
                   <img onClick={() => remove(index)} className='w-[5%] cursor-pointer' src={assets.bin_icon} alt="" />
@@ -38,7 +38,7 @@ const CartItem = () => {
             )
           })
         }
-        <div className='w-[40vw] py-4 flex gap-3 flex-col items-start'>
+        <div className='md:w-[40vw] w-full py-4 flex gap-3 flex-col items-start'>
           <h1 className='text-3xl font-bold'>Billing</h1>
           <div className='w-full justify-between flex'>
             <h1 className='text-xl capitalize font-semibold'>subtotal</h1>

@@ -6,7 +6,7 @@ const Collection = () => {
     const { active, setsubactive, subactive, subsetactive, filteredProducts, Catergoray, subCategory } = useContext(StoreContext)
     return (
         <div className='flex p-2'>
-            <div className='h-[90vh] p-2 sticky top-6 rounded-xl flex flex-col gap-y-5 w-[30vw] bg-white'>
+            <div className='h-[90vh] p-2 sticky top-6 rounded-xl hidden md:flex flex-col gap-y-5 w-[30vw] bg-white'>
                 <div>
                     <h1 className='text-2xl text-blue-500 font-semibold'>Catergoray</h1>
                     {
